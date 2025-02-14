@@ -1,0 +1,3 @@
+user= twitch
+
+pass= RT63M65AdLv46emL
