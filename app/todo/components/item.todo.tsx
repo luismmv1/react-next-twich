@@ -15,10 +15,11 @@ const ItemTodo = ({ todo }: ItemTodoProps) => {
 
     let [isPending, startTrasnition] = useTransition();
 
-    const handleClickRemove = async (id: string) => {
+    const handleClickRemove = async (id: string): Promise<void> => {
         const res = await removeTodo(id);
         if (res.error) {
-            return toast.error(res.error);
+            toast.error(res.error);
+            return;
         }
         toast.success(todo.title + " Removed successfully 🗑️");
     }
